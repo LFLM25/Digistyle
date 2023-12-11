@@ -1,0 +1,152 @@
+body{
+    background-color: #ffff;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: 0%;
+    font-family: Arial, sans-serif;
+    background-image: url(/imagenes/R.jpeg);
+}
+
+.titulo{
+    left: 15%;
+    width: 20%;
+    top: 6%;
+    position: absolute; 
+    
+}
+.t{   
+    top: 10%;
+    position: absolute;
+    left: 40%;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.c{
+    top: 10%;
+    position: absolute;
+    left: 50%;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.carro{
+    top: 10%;
+    position: absolute;
+    left: 60%;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.salida{
+    top: 10%;
+    position: absolute;
+    left: 70%;
+    font-size: 15px;
+    font-weight: bolder;
+}   
+.registro{
+    top: 10%;
+    position: absolute;
+    left: 80%;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.ingreso{
+    top: 2%;
+    position: absolute;
+    left: 65%;
+    font-size: 15px;
+    font-weight: bolder;
+}
+*{
+    margin: 1vh;
+    padding: 0vh;
+}
+.b{
+    top: 1%;
+    position: absolute;
+    left: 75%;
+    font-size: 15px;
+    font-weight: bolder; 
+    
+ 
+}
+.producto{
+    top: 10%;
+    width: 30%;
+    border: 1px black solid;
+    background-color: rgb(246, 240, 244);
+}
+.servicio{
+    border: 1px black solid;
+    min-height: 5vh;
+}
+
+a{
+  color: #0c0b0b; 
+  text-decoration: none;
+}
+.s{
+    font-size: 2ch;
+    font-style: normal;
+    forced-color-adjust: black;
+    font-weight: bolder;
+}
+hr{
+    border: 1px black solid;
+}
+.p{
+    position: absolute;
+    left: 70%; 
+    font-weight: bolder;
+}
+.e{
+    position: absolute;
+    left: 50%;
+    font-weight: bolder;
+}
+.q{
+    position: absolute;
+    left: 30%; 
+    font-weight: bolder;
+}
+.f{
+    position: absolute;
+    left: 10%;
+    font-weight: bolder;
+}
+.fechas{
+    font-weight: bolder;
+}
+.mano{
+    top: 145%;
+    font-size: 30px;
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 43%;
+    font-weight: bolder 
+}
+.pelo{
+    top: 145%;
+    font-size: 30px;
+    color: rgb(247, 249, 250);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 80%;
+    font-weight: bolder 
+
+}
+.busqueda{
+    top: 2.5%;
+    position: absolute;
+    left: 90%;
+    font-size: 15px;
+    font-weight: bolder; 
+}
+
+
+
+
+
+
+
+
