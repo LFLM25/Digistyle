@@ -1,0 +1,144 @@
+body{
+    background-color: #ffff;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: 0%;
+    font-family: Arial, sans-serif;
+    background-image: url(/imagenes/R.jpeg);
+  }
+  .titulo{
+    left: 15%;
+    width: 20%;
+    top: 6%;
+    position: absolute;  
+  }
+  h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: 40pt;
+    letter-spacing: 2cm;
+    text-align: center;
+  }
+  h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: lab(from color l a b);
+    color:rgb(42, 32, 32);
+    
+  }
+  h{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color:black;
+  }
+  
+  .input{
+    border-radius: 5px;
+    border-color: black;
+    letter-spacing: 1;
+    padding: 5px;
+  }
+  
+  .validar{
+    padding: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;   
+  }
+  h6{
+    font-family: Arial, Helvetica, sans-serif;
+    border-end-end-radius: 25px;
+    font-size: 15px;
+    left: 30%;
+    top: 50%;
+  }
+  .t{   
+    top: 10%;
+    position: absolute;
+    left: 40%;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  .c{
+    top: 10%;
+    position: absolute;
+    left: 50%;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  .carro{
+    top: 10%;
+    position: absolute;
+    left: 60%;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  .salida{
+    top: 10%;
+    position: absolute;
+    left: 70%;
+    font-size: 15px;
+    font-weight: bolder;
+  }   
+  .registro{
+    top: 10%;
+    position: absolute;
+    left: 80%;
+    font-size: 15px;
+    font-weight: bolder;
+  
+  }
+  .registro:hover{
+    background-color: white;
+    color: black; 
+    box-shadow: 0px 
+  }
+  .ingreso{
+    top: 2%;
+    position: absolute;
+    left: 70%;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  a{
+      color: #0c0b0b; 
+      text-decoration: none;
+  }
+  hr{
+    font-weight: bolder;
+    border: 1px black solid;
+  }
+  .p{
+      right: 30px;
+      top: 100%;
+      position: absolute;
+      left: 20%;
+      font-size: 15px;
+      font-weight: bolder;
+  }
+  .e{
+      font-weight: bolder;
+      right: 30px;
+      top: 100%;
+      position: absolute;
+      left: 5%;
+      font-size: 15px;
+  }
+  .q{
+      font-weight: bolder;
+      right: 15%;
+      top: 100%;
+      position: absolute;
+      left: 10%;
+      font-size: 15px;
+  }
+  .f{
+      font-weight: bolder;
+      right: 25%;
+      top: 100%;
+      position: absolute;
+      left: 33%;
+      font-size: 15px;
+  }
+  .formato{
+    text-align: center;
+  }

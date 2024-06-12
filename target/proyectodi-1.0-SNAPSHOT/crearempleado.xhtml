@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+     
+    
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="./Template.xhtml">
+            <ui:define name="content">
+                <f:view>
+                    <h:form>
+                        <h1><h:outputText value="Crear Empleado"/></h1>
+                        <h:panelGrid columns="2">                      
+                            <h:outputLabel value="Nombre:" for="nombre" />
+                            <p:inputText id="nombre" value="#{controladorEmpleados.emp.nombre}" title="Nombre" required="true" requiredMessage="El campo nombre es obligatorio" validatorMessage="tener entre 5 y 25 caracteres">
+                                <p:messages id="nombre" for="nombre" style="float: right;"/>
+                                <f:validator validatorId="validatorNombre"/>
+                            </p:inputText>
+                            <h:outputLabel value="Apellido:" for="apellido" />
+                            <p:inputText id="apellido" value="#{controladorEmpleados.emp.apellido}" title="Apellido" required="true" requiredMessage="El campo apellido es obligatorio" validatorMessage="El campo debe tener entre 5 y 25 caracteres">
+                                <f:validateLength minimum="5" maximum="25"/>
+                            </p:inputText> 
+                            <h:outputLabel value="Cargo:" for="cargo" />
+                            <p:inputText id="cargo" value="#{controladorEmpleados.emp.cargo}" title="Cargo" required="true" requiredMessage="El campo cargo es obligatorio" validatorMessage="El campo debe tener entre 5 y 25 caracteres">
+                                <f:validateLength minimum="5" maximum="25"/>
+                            </p:inputText> 
+                            <h:outputLabel value="Salario:" for="salario" />
+                            <p:inputText id="salario" value="#{controladorEmpleados.emp.salario}" title="Salario" required="true" requiredMessage="El campo salario es obligatorio" validatorMessage="Rango">                                                
+                                <f:validateDoubleRange minimum="1000.42" maximum="4000.55"/>
+                            </p:inputText>
+                            <h:outputLabel value="Email:" for="email"/>
+                            <p:inputText id="email" value="#{controladorEmpleados.emp.email}" title="Email" required="true" requiredMessage="El campo email es obligatorio" validatorMessage="Su cuenta de correo no es válida">
+                               <f:validator validatorId = "validatorEmail"/>
+                            </p:inputText>
+                            <h:outputLabel value="Telefono:" for="telefono" />
+                            <p:inputText id="telefono" value="#{controladorEmpleados.emp.telefono}" title="Telefono">
+                            </p:inputText>
+                            <h:outputLabel value="Direccion:" for="direccion" />
+                            <p:inputText id="direccion" value="#{controladorEmpleados.emp.direccion}" title="Direccion">
+                            </p:inputText>
+                            <h:outputLabel value="Estado:" for="estado" />
+                            <p:selectOneMenu id="estado" value="#{controladorEmpleados.emp.estado}" title="Estado" required="true" requiredMessage="Seleccionar Estado">
+                                <f:selectItem itemLabel="Seleccionar Estado" itemValue="emp" />
+                                <f:selectItem itemLabel="Activo" itemValue="Activo" />
+                                <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
+                            </p:selectOneMenu> 
+                        </h:panelGrid>
+                        <p:commandButton value="Insertar" action="#{controladorEmpleados.crearEmpleado()}" rendered="#{empty controladorEmpleados.emp.nombre}" /> updat
+                        <p:commandButton value="Actualizar" action="#{controladorEmpleados.actualizarEmpleado()}" rendered="#{not empty controladorEmpleados.emp.nombre}" />
+                        <p:button value="Volver" outcome="mostrarEmpleados.xhtml" />
+                        <p:messages globalOnly="true" style="color:red"/>
+                    </h:form>
+                </f:view>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    
+    <h:head>
+        <title>tabla servicio</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="./Template.xhtml">
+            <ui:define name="content">
+                <f:view>
+                    <h:form>
+                        <p:commandLink value="Crear servicio" action="#{controladorServicios.crearServicioP1()}" />
+                    <h1><h:outputText value=""/></h1>
+                       <h:dataTable value="#{controladorServicios.all}" var="servi" id="t-all" styleClass="jsf-data-table display nowrap" width="100%">
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="ServicioId"/>
+                                </f:facet>
+                            <h:outputText value="#{servi.servicioId}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Nombre"/>
+                                </f:facet>
+                                <h:outputText value="#{servi.nombre}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Estado"/>
+                                </f:facet>
+                                <h:outputText value="#{servi.estado}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="FechaCreacion"/>
+                                </f:facet>
+                                    <h:outputText value="#{servi.fechaCreacion}">
+                                    <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                                </h:outputText>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Acciones"/>
+                                </f:facet>
+                                <h:commandButton value="Eliminar" action="#{controladorServicios.eliminarServicio(servi)}" onclick="return confirm('Desea eliminar el servicio')" />
+                                <h:commandButton value="Actualizar" action="#{controladorServicios.actualizarServicioP1(servi)}" /> 
+                            </h:column>
+                        </h:dataTable>
+
+                    </h:form>
+                </f:view>      
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+      <h:body>
+          <h:form>
+        <h3>Enviar Correo Electrónico</h3>
+        <p:panelGrid columns="3" >
+        <p:outputLabel for="destinatario">Destinatario:</p:outputLabel>
+        <p:inputText id="destinatario" value="#{correoBean.destinatario}" required="true"  requiredMessage="correo requerido"/>
+        <p:message for="destinatario" />        
+        <p:outputLabel for="asunto">Asunto:</p:outputLabel>
+        <p:inputText id="asunto" value="#{correoBean.asunto}" required="true" requiredMessage="asunto" />
+        <p:message for="asunto" />        
+        <p:outputLabel for="mensaje">Mensaje:</p:outputLabel>
+        <p:inputTextarea id="mensaje" value="#{correoBean.mensaje}" rows="5" cols="30" required="true" requiredMessage="notificar mensaje"  />
+        <p:message for="mensaje" />
+        </p:panelGrid>
+        <p:commandButton value="Enviar Correo" action="#{correoBean.enviarCorreo}" update="messages"/>
+        <p:growl id="messages" showDetail="true"/>
+    </h:form>
+    </h:body>
+</html>
+
